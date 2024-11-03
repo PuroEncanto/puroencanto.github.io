@@ -1,0 +1,192 @@
+/* Estilos para las secciones y categorías */
+.category-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo minimalista con degradado para separadores de categorías */
+.category-separator {
+    width: 60%;
+    margin: 0 auto;
+    border-top: 3px solid transparent;
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Cambia estos colores al degradado deseado */
+    height: 3px;
+    border-radius: 5px;
+}
+
+
+/* Estilo para los stickers en las cards */
+.sticker {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+	transition: transform 0.3s ease; /* Transición suave para el sticker */
+}
+
+/* Efecto 6 - Animación en los stickers (zoom al hover) */
+.card:hover .sticker {
+    transform: scale(1.2); /* Aumenta el tamaño del sticker */
+}
+
+/* Fondo personalizado para cada card */
+.card {
+    border: none !important; /* Opcional: elimina bordes si no son necesarios */
+    border-radius: 8px !important; /* Opcional: suaviza las esquinas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Opcional: agrega una sombra ligera */
+}
+
+.card-wmen {
+	background-color: #fff6fe !important;
+}
+
+.card-men {
+	background-color: #f7fbff !important;
+}
+
+/* Efecto 8 - Animación en la carga de imágenes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards; /* Animación de desvanecimiento */
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Ajustes del logo en el header */
+header .logo {
+    height: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Efecto de cambio de color y subrayado en los ítems de menú al hacer hover */
+.nav-link {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff7e5f; /* Cambia al color deseado */
+    border-bottom: 2px solid #ff7e5f; /* Subrayado al hacer hover */
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  z-index: 2;
+  
+    /*border-radius: 50%;*/
+    font-size: 1.5em;
+    padding: 0.4em 0.5em;
+}
+
+/* Indicadores del carrusel */
+.slider-indicators {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.prev-btn {
+  left: -30px;
+}
+
+.next-btn {
+  right: -30px;
+}
+
+/* Fondo claro y bordes suaves para el modal */
+.modal-content {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+}
+
+/* Overlay semitransparente */
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Botón de WhatsApp estilizado */
+#whatsappLink {
+    background-color: #25d366;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+#whatsappLink:hover {
+    background-color: #1ebe57;
+    text-decoration: none;
+}
+
+/* Icono de WhatsApp en el botón */
+#whatsappLink::before {
+    content: "📲 ";
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+/* Animación de apertura del modal */
+.modal.fade .modal-dialog {
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
